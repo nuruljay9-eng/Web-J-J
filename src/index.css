@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F8F0E5;
+  --color-cream: #F4E8D9;
+  --color-beige: #EBD5BD;
+  --color-gold: #C6A477;
+  --color-brown: #292019;
+  --color-obsidian: #171513;
+
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-editorial: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Lora', Georgia, 'Times New Roman', serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    background-color: #F8F0E5;
+    color: #292019;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+  }
+
+  h1, h2, h3, .font-display, .font-editorial {
+    font-family: var(--font-display);
+  }
+
+  h1, h2 {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle architectural wireframe grid background */
+.arch-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(198, 164, 119, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(198, 164, 119, 0.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Subtle custom scrollbar matching warm editorial palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4E8D9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C6A477;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #292019;
+}
